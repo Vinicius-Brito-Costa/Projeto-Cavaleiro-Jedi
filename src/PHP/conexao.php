@@ -1,8 +1,8 @@
 <?php
     function query($sql){
-        $servidor = "localhost";
-        $usuario  = "root";
-        $senha    = "";
+        $servidor = "den1.mysql6.gear.host";
+        $usuario  = "fullstackdb1";
+        $senha    = "Cg9X2D_-z03J";
         $bancoDB  = "fullstack";
         $conexao = mysqli_connect($servidor, $usuario, $senha, $bancoDB);
         if(!$conexao)
