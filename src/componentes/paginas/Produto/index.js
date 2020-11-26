@@ -1,7 +1,6 @@
 import '../../../css/produto.css';
 import * as script from '../../../javascript/pagina-produto'
 import React from 'react';
-
 export default class Produto extends React.Component{
     constructor(props){
         super(props);
@@ -22,6 +21,8 @@ export default class Produto extends React.Component{
         };
         console.log(cabecalho);
         await fetch(url, cabecalho);
+        await alert("Compra Realizada.");
+        await this.props.history.push("/");
     }
     mudarQuantidade(){
         let quant = document.getElementById("quantidade").value;
@@ -50,6 +51,7 @@ export default class Produto extends React.Component{
                                             <div className="valor-frete text-dark">Frete: R$10,00</div>
                                             <div className='valor-parcelado font-weight-bold'>6x {Math.round(this.state.dados['preco_atual'] / 6, 2).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}<p></p>
                                             </div>
+
                                             <label htmlFor="quantidade" className="quantidade font-weight-bold">Quantidade: </label>
                                             <input id="quantidade" className="font-weight-bold form-control-sm w-100" name="quantidade" type="number" value={this.state.quantidade} min="1" placeholder="" onChange={() => this.mudarQuantidade()}/><br/>
                                         </div>
@@ -58,7 +60,7 @@ export default class Produto extends React.Component{
                                         <span className="frete-mensagem font-weight-bold">Frete não incluso.</span>
                                         <input type="hidden" name="preco_atual" id="preco_atual" value={this.state.dados['preco_atual']}/>
                                         <input type="hidden" name="id_produto" id="id_produto" value={this.state.dados['id_produto']}/>
-                                        <div className="botao d-flex mb-3"><button className="btn btn-success btn-lg border border-dark shadow-sm font-weight-bold" type="submit" onClick={() =>alert('Seu pedido foi efetuado!')}>COMPRAR</button></div>
+                                        <div className="botao d-flex mb-3"><button className="btn btn-success btn-lg border border-dark shadow-sm font-weight-bold" type="submit" >COMPRAR</button></div>
                                     </div>
                                 </div>
                                 <div className="row mt-2 mb-3 mx-1 mx-md-0 flex-column flex-md-row justify-content-center">
