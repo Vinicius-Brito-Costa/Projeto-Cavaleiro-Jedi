@@ -1,0 +1,13 @@
+main{
+    padding-top: 80px;
+}
+.img-fundo{
+    background-image: url("../imagens/about/fundo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 30vh;
+}
+.img-fundo h1{
+    font-size: 10vw;
+}

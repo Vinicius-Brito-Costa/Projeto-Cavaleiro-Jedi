@@ -1,0 +1,89 @@
+import '../../../css/produto.css';
+import * as script from '../../../javascript/pagina-produto'
+import React from 'react';
+
+export default class Produto extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            dados: this.props.location.state.item,
+            quantidade: 1
+        }
+        this.mudarQuantidade = this.mudarQuantidade.bind(this);
+        this.enviarCompra = this.enviarCompra.bind(this);
+    }
+    async enviarCompra(elemento) {
+        elemento.preventDefault();
+        const url = "http://localhost/Projeto%20Cavaleiro%20Jedi/projeto-novo/src/PHP/envioCompra.php";
+        const dado = new FormData(elemento.target);
+        const cabecalho = {
+            method: "post",
+            body: dado,
+        };
+        console.log(cabecalho);
+        await fetch(url, cabecalho);
+    }
+    mudarQuantidade(){
+        let quant = document.getElementById("quantidade").value;
+        if(quant > 0) this.setState({quantidade: quant});
+        else this.setState({quantidade: 1});
+    }
+    render(){
+        return(
+            <main className="conteudo-site">
+                <div className="background mt-4">
+                    <div className="conteudo">
+                        <form className="d-flex justify-content-center caixa-de-compras" onSubmit={this.enviarCompra}>
+                            <div className="compra bg-white container row border border-secondary rounded-lg mb-4 shadow-sm">
+                                <div className="d-flex flex-column flex-md-row justify-content-center">
+                                    <div className="main-box container col-6 w-100 w-md-50 mw-100 mw-md-50 mt-3 mr-2 px-0">
+                                        <div className="imagem-produto col container-fluid">
+                                            <img src={require(`../../../imagens/produtos/${this.state.dados['nome_imagem']}`).default} className="img-fluid" alt={this.state.dados["nome"]}/>
+                                        </div>
+                                    </div>
+                                    <div className="info col-6 w-100 w-md-50 mw-100 justify-content-end rounded-lg border mt-3">
+                                        <div className="nome-produto font-weight-bold mt-2">{this.state.dados['nome']}</div>
+                                        <div className="precos form-group">
+                                            <div className='valor-antigo'>De <p className="text-danger font-weight-bold">{(this.state.dados['preco_antigo'] * 1).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p> por</div>
+                                            <div className='valor-unidade text-success font-weight-bold'>{(this.state.dados['preco_atual'] * 1).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+                                            <span className="economize d-flex">Economize <p className="text-success font-weight-bold">{Math.round(((this.state.dados['promocao']/100) * this.state.dados['preco_antigo']), -2).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>!</span>
+                                            <div className="valor-frete text-dark">Frete: R$10,00</div>
+                                            <div className='valor-parcelado font-weight-bold'>6x {Math.round(this.state.dados['preco_atual'] / 6, 2).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}<p></p>
+                                            </div>
+                                            <label htmlFor="quantidade" className="quantidade font-weight-bold">Quantidade: </label>
+                                            <input id="quantidade" className="font-weight-bold form-control-sm w-100" name="quantidade" type="number" value={this.state.quantidade} min="1" placeholder="" onChange={() => this.mudarQuantidade()}/><br/>
+                                        </div>
+                                        <span className="d-flex total font-weight-bold">Total </span>
+                                        <div className='valor-total d-flex font-weight-bold text-success'>{(this.state.dados['preco_atual'] * this.state.quantidade).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+                                        <span className="frete-mensagem font-weight-bold">Frete não incluso.</span>
+                                        <input type="hidden" name="preco_atual" id="preco_atual" value={this.state.dados['preco_atual']}/>
+                                        <input type="hidden" name="id_produto" id="id_produto" value={this.state.dados['id_produto']}/>
+                                        <div className="botao d-flex mb-3"><button className="btn btn-success btn-lg border border-dark shadow-sm font-weight-bold" type="submit" onClick={() =>alert('Seu pedido foi efetuado!')}>COMPRAR</button></div>
+                                    </div>
+                                </div>
+                                <div className="row mt-2 mb-3 mx-1 mx-md-0 flex-column flex-md-row justify-content-center">
+                                    <div className="textos col form-group my-auto rounded-lg border w-100 mw-100 w-md-50 h-100 mr-2">
+                                        <div className="descricao overflow-auto my-4">{this.state.dados['descricao']}</div>
+                                    </div>
+                                    <div className="endereco col form-group rounded-lg border w-100 mw-100 w-md-50 h-100 my-auto">
+                                        <div className="my-4 mx-1">
+                                            <input id="cep" name="cep" className="form-control form-control-sm endereco-itens"  onChange={() => script.AutoPreencherEndereco()} type="number" placeholder="Cep"/>
+                                            <div className="row mx-1 w-100 mx-auto">
+                                                <input type="text" id="endereco" name="endereco" className="col col-9 col-md-10 col-lg-11 form-control  form-control-sm endereco-itens" placeholder="Endereco"/>
+                                                <input type="text" id="numero" name="numero" className="col col-3 col-md-2 col-lg-1 form-control    form-control-sm endereco-itens" placeholder="N°"/>
+                                            </div>
+                                            <input type="text" id="estado" name="estado" className="form-control form-control-sm endereco-itens"    placeholder="Estado"/>
+                                            <input type="text" id="cidade" name="cidade" className="form-control form-control-sm endereco-itens"    placeholder="Cidade"/>
+                                            <input type="text" id="telefone" name="telefone" className="form-control form-control-sm endereco-itens"    placeholder="(11) 2222-2222"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        );
+    }
+    
+}

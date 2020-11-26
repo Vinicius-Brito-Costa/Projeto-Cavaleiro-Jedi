@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.comentario {
+    border-left: 15px solid white;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.texto {
+
+    color: white;
+    padding: 40px;
+}
+
+
+main {
+    padding-top: 80px;
+}
+
+.footer-bg {
+    padding-top: 0;
+    margin-top: 0;
+}
+@media all and (max-width: 500px) {
+    .preco-atual p {
+        font-size: 1.5vmax;
+    }
+    .promo p {
+        font-size: 1.5vmax;
+    }
+    .box-produtos{
+        padding: 5px  0px;
+        margin: 0;
+    }
+
+}
