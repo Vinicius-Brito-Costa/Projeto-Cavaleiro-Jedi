@@ -26,18 +26,5 @@ class App extends React.Component{
 		);
 	}
 }
-/*function App() {
-	const [ contador, subirContador ] = useState(0);
-	function setContador(){
-		subirContador(contador + 1);
-		document.querySelector("span#contador").innerText = contador;
-	}
-  	return (
-		<div className="App">
-			<span className="font-weight-bolder" id="contador">{ contador }</span>
-			<button type="button" className="btn btn-success" onClick={setContador}>CLique em mim</button>
-		</div>
-  	);
-}*/
 
 export default App;

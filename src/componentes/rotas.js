@@ -1,8 +1,6 @@
 import {
-    BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
 import Produtos from './paginas/Produtos/index';
 import Index from './paginas/Index/index';

@@ -1,9 +1,4 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
-import Rotas  from './rotas';
 
 export default class Rodape extends React.Component{
     render(){

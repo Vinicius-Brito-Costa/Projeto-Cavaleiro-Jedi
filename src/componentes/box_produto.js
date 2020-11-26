@@ -1,5 +1,4 @@
 import React from 'react';
-import * as script from '../javascript/products-main';
 import {
     Link
   } from "react-router-dom";
