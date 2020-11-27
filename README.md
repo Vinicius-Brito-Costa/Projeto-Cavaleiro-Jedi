@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto do Módulo Cavaleiro Jedi
+![Preview do site](./src/github/readme.jpg)
+### [Acesse o Site aqui](fstack.netlify.app)
 
 ## Available Scripts
 
