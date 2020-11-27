@@ -13,7 +13,7 @@ export default class Produto extends React.Component{
     }
     async enviarCompra(elemento) {
         elemento.preventDefault();
-        const url = "http://www.fullstackreact.rf.gd/envioCompra.php";
+        const url = "https://fullstackbd.000webhostapp.com/envioCompra.php";
         const dado = new FormData(elemento.target);
         const cabecalho = {
             method: "post",
