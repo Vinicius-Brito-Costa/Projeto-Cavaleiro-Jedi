@@ -6,7 +6,7 @@ export default class Produto extends React.Component{
     
     render(){
         return(
-            <div className={'box-produtos sc'+ this.props.classe +' col'} id={'c'+ this.props.id +''}>
+            <div className={'box-produtos sc'+ this.props.classe +' col px-2'} id={'c'+ this.props.id +''}>
                 <Link style={{textDecoration: 'none'}}to={{pathname: '/produto', state: { item: this.props.retorno }}}>
                 <form onClick={this.submitForm} role="button" method="post" action="/produto">
                     <img className="cover" src={require('../imagens/produtos/' + this.props.imagem).default} alt="Imagem do produto" />
