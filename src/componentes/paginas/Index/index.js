@@ -11,7 +11,7 @@ export default class Produtos extends React.Component{
         }
     }
     async componentDidMount(){
-        let resposta = await fetch("http://localhost/Projeto%20Cavaleiro%20Jedi/projeto-novo/src/PHP/contentJson.php?table=produtos&query=destaque")
+        let resposta = await fetch("http://www.fullstackreact.rf.gd/contentJson.php?table=produtos&query=destaque")
         let dados = await resposta.json();
         this.setState({BD: dados});
         script.ChecarVazio()

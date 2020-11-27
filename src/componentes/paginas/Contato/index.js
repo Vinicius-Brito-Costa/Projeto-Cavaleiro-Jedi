@@ -10,7 +10,7 @@ export default class Contato extends React.Component{
     }
     async enviarFeedback(elemento) {
         elemento.preventDefault();
-        const url = "http://localhost/Projeto%20Cavaleiro%20Jedi/projeto-novo/src/PHP/envioFeedback.php";
+        const url = "http://www.fullstackreact.rf.gd/envioFeedback.php";
         const dado = new FormData(elemento.target);
         const cabecalho = {
             method: "post",
