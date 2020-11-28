@@ -6,20 +6,20 @@ export default class Produto extends React.Component{
     
     render(){
         return(
-            <div className={'box-produtos sc'+ this.props.classe +' col px-2'} id={'c'+ this.props.id +''}>
+            <div className="px-1 py-1 card-box">
                 <Link style={{textDecoration: 'none'}}to={{pathname: '/produto', state: { item: this.props.retorno }}}>
-                <form onClick={this.submitForm} role="button" method="post" action="/produto">
-                    <img className="cover" src={require('../imagens/produtos/' + this.props.imagem).default} alt="Imagem do produto" />
-                    <div className="box-descricao text-light px-2">
-                        <span className="preco-antigo text-danger d-block"><p>{this.props.preco_antigo}</p></span>
+                <div className={'card border-0 bg-transparent text-light sc'+ this.props.classe} id={'c'+ this.props.id +''}>
+                    <img className="card-img-top" src={require('../imagens/produtos/' + this.props.imagem).default} alt="Imagem do produto" />
+                    <div className="card-body p-1 box-descricao">
+                    <span className="preco-antigo text-danger d-block"><p>{this.props.preco_antigo}</p></span>
                         <span className="nome-produto d-block text-nowrap overflow-hidden">{this.props.nome}</span>
-                        <ul className="list-unstyled d-flex mx-0 px-0 container-fluid text-center">
+                        <ul className="list-unstyled d-flex mx-0 px-0 mb-0 container-fluid text-center">
                             <li className="preco-atual text-light mx-0 pl-1 pr-0 px-0 py-0 container-fluid"><p>{"R$ " + this.props.preco}</p></li>
-                            <li className="promo bg-danger mx-0 px-0 mx-0-sm px-0-sm mx-1 px-1 "><p>{this.props.promo }</p></li>
+                            <li className="promo bg-danger mx-0 px-0 mx-0-sm px-0-sm px-1 ml-1"><p>{this.props.promo }</p></li>
                         </ul>
                         <input type="hidden" name="id_produto" style={{display: "none"}} ></input>
                     </div>
-                </form>
+                </div>
                 </Link>
             </div>
         );

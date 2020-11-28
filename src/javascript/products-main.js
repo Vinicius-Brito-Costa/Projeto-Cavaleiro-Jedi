@@ -30,38 +30,40 @@ export function MostrarCategoriasMobile()
 }
 export function MostrarApenas(id) 
 {
-    let produtos = document.getElementsByClassName('box-produtos');
+    let produtos = document.getElementsByClassName('card');
+    let boxProduto = document.getElementsByClassName('card-box')
     for (let i = 0; i < produtos.length; i++) 
     {
         if (id !== 'todos') 
         {
             if (produtos[i].id !== id) 
             {
-                produtos[i].style = "display: none"
+                boxProduto[i].style = "display: none"
             } 
             else if (produtos[i].id === id) 
             {
-                produtos[i].style = "display: inline-block"
+                boxProduto[i].style = "display: inline-block"
             }
         }
         else
         {
-            produtos[i].style = "display: inline-block"
+            boxProduto[i].style = "display: inline-block"
         }
     }
 }
 export function MostrarApenasSub(categoria, sub)
 {
-    let produtos = document.getElementsByClassName('box-produtos');
+    let produtos = document.getElementsByClassName('card');
+    let boxProduto = document.getElementsByClassName('card-box')
     log(produtos.length);
     for(let i = 0; i < produtos.length; i++)
     {
-        if(!produtos[i].classList.contains(sub))
+        if(!produtos[i].classList.contains(sub) || produtos[i].id !== categoria)
         {
-            produtos[i].style = "display: none";
+            boxProduto[i].style = "display: none";
         }
         else if(produtos[i].classList.contains(sub) && produtos[i].id === categoria){
-            produtos[i].style = "display: inline-block";
+            boxProduto[i].style = "display: inline-block";
         }
     }
 }

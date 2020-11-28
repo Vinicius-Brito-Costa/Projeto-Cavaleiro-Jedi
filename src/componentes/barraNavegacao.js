@@ -10,13 +10,15 @@ export default class BarraDeNavegacao extends React.Component{
         return(
             <Router>
             <div className="header-bg cabecalho container-fluid fixed-top">
-                <nav className="navbar navbar-expand-lg navbar-dark container-fluid fixed-top">
-                    <Link className="navbar-brand" to="/">
+                <nav className="navbar p-0 navbar-expand-lg navbar-dark container-fluid fixed-top pt-2">
+                    <Link className="navbar-brand pl-4" to="/">
                         <img id="logo" src={require("../imagens/fs-logo.png").default} className="img-fluid" alt="Logo"/>
                     </Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarSite">
-                        <span className="navbar-toggler-icon  container-fluid"></span>
-                    </button>
+                    <div className="pr-4">
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarSite">
+                            <span className="navbar-toggler-icon container-fluid"></span>
+                        </button>
+                    </div>
                     <div className="collapse navbar-collapse justify-content-end" id="navBarSite">
                         <ul className="navbar-nav">
                             <li className="nav-item mx-4">
