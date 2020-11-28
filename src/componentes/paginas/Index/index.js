@@ -20,7 +20,7 @@ export default class Produtos extends React.Component{
         return(
             <main className="container-fluid mx-0 px-0 conteudo-site pb-4">
                 <div className="bg-dark">
-                    <img className="cover1" src={require('../../../imagens/index/aryan-dhiman-iGLLtLINSkw-unsplash.jpg').default}/>
+                    <img className="cover1" src={require('../../../imagens/index/aryan-dhiman-iGLLtLINSkw-unsplash.jpg').default} alt="" title="Photo by Aryan Dhiman on Unsplash" />
                     <div className="comentario">
                         <div className="texto">
                             <h1>Seja bem vindo a Full Stack</h1>

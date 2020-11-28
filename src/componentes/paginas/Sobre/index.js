@@ -18,7 +18,7 @@ export default function Produtos(props){
             </div>
             <ul className="container list-group pb-4 px-1">
                 <li className="list-group-item active"><h2 className=" text-light">ESTRUTURA FÍSICA</h2></li>
-                <li className="list-group-item bg-dark"><img className="img-fluid" src={require("../../../imagens/about/ali-yahya-ytNFYf4d_30-unsplash.jpg").default} alt="Sede"/></li>
+                <li className="list-group-item bg-dark"><img className="img-fluid" src={require("../../../imagens/about/ali-yahya-ytNFYf4d_30-unsplash.jpg").default} alt="Sede" title="Photo by Ali Yahya on Unsplash" /></li>
                 <li className="list-group-item bg-dark"><p className="mb-0 text-light">Nossa Sede Administrativa esta localizado estrategicamente próximo à principal via do país, facilitando e acelerando o tempo deentrega dos pedidos. O maior e mais moderno CD do Fullstack!</p></li>
             </ul>
         </main>
