@@ -20,7 +20,7 @@ export default class Produtos extends React.Component{
     render(){
         return(
             <div className="conteudo-site">
-                <nav id="link-barra-produtos" className="d-flex px-0 py-0 navbar navbar-expand-lg" id="categoriaNav">
+                <nav id="link-barra-produtos categoriaNav" className="d-flex px-0 py-0 navbar navbar-expand-lg">
                     <a href="#" className="categorias-drop navbar-toggler text-light bg-dark container-fluid rounded-0 text-center" data-toggle="collapse" data-target="#menu_categorias">
                         <span className="w-100">CATEGORIAS</span>
                     </a>
