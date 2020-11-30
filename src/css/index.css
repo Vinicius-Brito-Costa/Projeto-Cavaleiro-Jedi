@@ -5,16 +5,23 @@ body {
 .comentario {
     /*border-left: 15px solid white;*/
     border: 5px solid #343a40;
-    background-color:  rgb(77, 74, 97);
+    background-image: url('../imagens/index/aryan-dhiman-iGLLtLINSkw-unsplash.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color:  rgb(77, 74, 97);*/
+    height: 70vh;
     margin-bottom: 0;
 }
 
 .texto {
 
-    color: white;
-    padding: 40px;
-}
+    background-color: #343a40bb;
+    margin: 0;
+    width: 50%;
+    height: 100%;
 
+}
 
 main {
     padding-top: 80px;
@@ -22,7 +29,7 @@ main {
 .cover1{
     object-fit: cover;
     width: 100%;
-    height: 400px;
+    height: 100vh;
 }
 .footer-bg {
     padding-top: 0;
