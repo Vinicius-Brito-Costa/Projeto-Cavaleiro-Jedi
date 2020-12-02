@@ -15,6 +15,7 @@ export default class Produtos extends React.Component{
         let dados = await resposta.json();
         this.setState({BD: dados});
         script.ChecarVazio()
+        
     }
     render(){
         return(
@@ -29,9 +30,13 @@ export default class Produtos extends React.Component{
                                 
                             </div>
                         </div>
-                        <video loop autoPlay className="video">
+                        <div className="overlayVideo"></div>
+                        <video loop autoPlay playsInline muted className="video" id="indexVideo">
                             <source src={require('./../../imagens/index/Matrix.mp4').default} type="video/mp4"></source>
                         </video>
+                        <script>
+                            window.document.getElementById('indexVideo').play();
+                        </script>
                     </div>
                     <small className="text-muted">VideoBy: https://youtube.com/MG1010</small>
                     <h1 className="text-white text-center">Produtos em destaque</h1>
