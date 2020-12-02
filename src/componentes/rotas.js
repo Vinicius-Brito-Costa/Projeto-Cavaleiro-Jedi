@@ -2,11 +2,11 @@ import {
     Switch,
     Route
   } from "react-router-dom";
-import Produtos from './paginas/Produtos/index';
-import Index from './paginas/Index/index';
-import Contato from './paginas/Contato/index';
-import Sobre from './paginas/Sobre/index';
-import Produto from './paginas/Produto/index';
+import Produtos from './paginas/produtos';
+import Index from './paginas/index';
+import Contato from './paginas/contato';
+import Sobre from './paginas/sobre';
+import Produto from './paginas/produto';
 export default function Rotas(){
       return(
             <Switch>

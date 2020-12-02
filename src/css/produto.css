@@ -2,8 +2,9 @@ main {
     padding-top: 100px;
     min-height: auto;
 }
-.nome-produto{
-    /*font-size: 2rem;*/
+.conteudo-produto{
+    padding-top: 80px;
+    padding-bottom: 0;
 }
 .valor-antigo{
     font-size: .7rem;

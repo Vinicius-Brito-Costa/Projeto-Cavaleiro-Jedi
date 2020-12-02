@@ -1,5 +1,5 @@
-import '../../../css/produto.css';
-import * as script from '../../../javascript/pagina-produto'
+import '../../css/produto.css';
+import * as script from '../../javascript/pagina-produto'
 import React from 'react';
 export default class Produto extends React.Component{
     constructor(props){
@@ -31,7 +31,7 @@ export default class Produto extends React.Component{
     }
     render(){
         return(
-            <main className="conteudo-site">
+            <main className="conteudo-produto">
                 <div className="background mt-4">
                     <div className="conteudo">
                         <form className="d-flex justify-content-center caixa-de-compras" onSubmit={this.enviarCompra}>
@@ -39,7 +39,7 @@ export default class Produto extends React.Component{
                                 <div className="d-flex flex-column flex-md-row justify-content-center">
                                     <div className="main-box container col-6 w-100 w-md-50 mw-100 mw-md-50 mt-3 mr-2 px-0">
                                         <div className="imagem-produto col container-fluid">
-                                            <img src={require(`../../../imagens/produtos/${this.state.dados['nome_imagem']}`).default} className="img-fluid" alt={this.state.dados["nome"]}/>
+                                            <img src={require(`../../imagens/produtos/${this.state.dados['nome_imagem']}`).default} className="img-fluid" alt={this.state.dados["nome"]}/>
                                         </div>
                                     </div>
                                     <div className="info col-6 w-100 w-md-50 mw-100 justify-content-end rounded-lg border mt-3">

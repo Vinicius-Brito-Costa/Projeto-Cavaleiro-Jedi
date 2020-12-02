@@ -2,29 +2,37 @@ body {
     margin: 0;
 }
 
-.comentario {
-    /*border-left: 15px solid white;*/
-    border: 5px solid #343a40;
-    background-image: url('../imagens/index/aryan-dhiman-iGLLtLINSkw-unsplash.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*background-color:  rgb(77, 74, 97);*/
-    height: 70vh;
-    margin-bottom: 0;
+.video{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    margin:  auto;
+    opacity: .5;
 }
-
-.texto {
-
-    background-color: #343a40bb;
+.texto{
+    padding: 10px;
+}
+.textoFundo{
+    z-index: 1;
+    position: absolute;
+    max-height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    min-width: 300px;
     margin: 0;
-    width: 50%;
-    height: 100%;
-
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.253);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.274);
+    border: solid 1px rgba(0, 0, 0, 0.061);
+    padding: 5px;
 }
-
+.conteudo-site{
+    padding-top: 0;
+}
 main {
-    padding-top: 80px;
+    padding-top: 0;
 }
 .cover1{
     object-fit: cover;
@@ -48,3 +56,4 @@ main {
     }
 
 }
+    

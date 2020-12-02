@@ -10,7 +10,6 @@ main {
     margin-bottom: 0;
 }
 .conteudo-site{
-    padding-top: 80px;
     padding-bottom: 0;
 }
 /* CORPO */
@@ -20,6 +19,9 @@ main {
     background-color: rgb(63, 53, 121);
     border-bottom: 1px solid rgba(255, 255, 255, 0.082);
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.37);
+    height: 80px;
+}
+.cabecalhoTop{
     height: 80px;
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/contato.css';
 export default class Contato extends React.Component{
     constructor(props){
         super(props);
@@ -34,7 +35,7 @@ export default class Contato extends React.Component{
     }
     render(){
         return(
-            <main className="conteudo-site">
+            <main className="conteudo-contato">
                 <div className="container">
                     <form className="formulario form-group col align-center align-self-center justify-content-middle" id="formReset" onSubmit={this.enviarFeedback
                     }>
@@ -47,7 +48,7 @@ export default class Contato extends React.Component{
                                 <input type="checkbox" onChange={this.aceitaPoliticas} checked={this.state.checkbox} className="d-inline" />
                                 <small className="form-text text-light form-check-label d-inline">Concordo com as politicas de publicidade do site.</small>
                             </div>
-                            <img className="img-fluid d-none d-md-inline mx-4 px-4" src={require("../../../imagens/icones/iconCaneta.svg").default} alt="Laptop"/>
+                            <img className="img-fluid d-none d-md-inline mx-4 px-4" src={require("../../imagens/icones/iconCaneta.svg").default} alt="Laptop"/>
                         </div>
                         <button id="botao" disabled className="btn btn-lg btn-primary font-weight-bold" type="submit">Enviar</button>
                     </form>

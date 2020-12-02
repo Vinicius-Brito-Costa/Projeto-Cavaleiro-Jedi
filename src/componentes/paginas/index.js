@@ -1,8 +1,8 @@
-import '../../../css/index.css';
-import '../../../javascript/pagina-produto';
-import * as script from '../../../javascript/products-main'
+import '../../css/index.css';
+import '../../javascript/pagina-produto';
+import * as script from '../../javascript/products-main'
 import React from 'react';
-import Produto from '../../box_produto';
+import Produto from '../box_produto';
 export default class Produtos extends React.Component{
     constructor(props){
         super();
@@ -20,15 +20,20 @@ export default class Produtos extends React.Component{
         return(
             <main className="container-fluid mx-0 px-0 conteudo-site">
                 <div className="bg-dark">
-                    <div className="comentario p-0 m-0">
-                        <div className="my-auto text-light texto">
-                            <div className="my-auto">
-                            <h1>Seja bem vindo a Full Stack</h1>
-                            <p>Com preços imbatíveis e mais de 10 produtos em seu catálogo, o Full Stack! está sempre à frente e traz em primeira mão os melhores lançamentos do mercado mundial de computadores.</p>
-                            <p>O e-commerce é um dos sites mais acessados do país trazendo produtos e atendimento de alta qualidade.</p>
+                    <div className="">
+                        <div className="textoFundo">
+                            <div className="text-center text-light align-self-center texto">
+                                <h1>Seja bem vindo a Full Stack</h1>
+                                <p>Com preços imbatíveis e mais de 10 produtos em seu catálogo, o Full Stack! está sempre à frente e traz em primeira mão os melhores lançamentos do mercado mundial de computadores.</p>
+                                <p>O e-commerce é um dos sites mais acessados do país trazendo produtos e atendimento de alta qualidade.</p>
+                                
                             </div>
                         </div>
+                        <video loop autoPlay className="video">
+                            <source src={require('./../../imagens/index/Matrix.mp4').default} type="video/mp4"></source>
+                        </video>
                     </div>
+                    <small className="text-muted">VideoBy: https://youtube.com/MG1010</small>
                     <h1 className="text-white text-center">Produtos em destaque</h1>
                     <div className="container-fluid w-100 mx-0 pb-4">
                         <div className="container-fluid mx-0 produtos row-cols-2 row-cols-lg-4 px-0 row">

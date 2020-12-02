@@ -2,7 +2,10 @@
         main {
             padding: 20px 0;
         }
-
+        .conteudo-produtos{
+            padding-top: 80px;
+            padding-bottom: 0;
+        }
         #menu-categorias {
             border-radius: 0;
         }
