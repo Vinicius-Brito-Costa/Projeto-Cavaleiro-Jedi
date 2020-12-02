@@ -1,5 +1,5 @@
 # Projeto do Módulo Cavaleiro Jedi
-![Preview do site](./src/github/readme.jpg)
+![Preview do site](./src/github/readme.gif)
 ### [Acesse o Site aqui](https://fstack.netlify.app)
 
 ## Available Scripts
