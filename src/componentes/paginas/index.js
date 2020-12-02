@@ -38,7 +38,7 @@ export default class Produtos extends React.Component{
                             window.document.getElementById('indexVideo').play();
                         </script>
                     </div>
-                    <small className="text-muted">VideoBy: https://youtube.com/MG1010</small>
+                    <small className="text-muted">Video: https://youtu.be/Ze2cbcUR-BY</small>
                     <h1 className="text-white text-center">Produtos em destaque</h1>
                     <div className="container-fluid w-100 mx-0 pb-4">
                         <div className="container-fluid mx-0 produtos row-cols-2 row-cols-lg-4 px-0 row">
