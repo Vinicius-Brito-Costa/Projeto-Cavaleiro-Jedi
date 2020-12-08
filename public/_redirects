@@ -1,6 +1,6 @@
-/produtos       /produtos
-/produto        /produto
-/contato        /contato
-/sobre          /sobre
-/               /
-/*              /
+# /produtos       /produtos
+# /produto        /produto
+# /contato        /contato
+# /sobre          /sobre
+# /               /
+# /*              /
