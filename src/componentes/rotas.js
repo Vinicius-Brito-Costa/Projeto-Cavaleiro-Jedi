@@ -15,6 +15,7 @@ export default function Rotas(){
                 <Route exact path="/sobre" component={Sobre}></Route>
 				<Route exact path="/produto" component={Produto}></Route>
 				<Route exact path="/*" component={Index}></Route>
+				<Route component={Index}></Route>
             </Switch>
       );
   }
