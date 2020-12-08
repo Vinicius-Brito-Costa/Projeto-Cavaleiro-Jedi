@@ -10,21 +10,11 @@ import Produto from './paginas/produto';
 export default function Rotas(){
       return(
             <Switch>
-                <Route exact path="/" component={Index}>
-
-                </Route>
-                <Route exact path="/produtos" component={Produtos}>
-
-                </Route>
-                <Route exact path="/contato" component={Contato}>
-
-                </Route>
-                <Route exact path="/sobre" component={Sobre}>
-
-                </Route>
-                <Route exact path="/produto" component={Produto}>
-
-                </Route>
+                <Route exact path="/produtos" component={Produtos}></Route>
+                <Route exact path="/contato" component={Contato}></Route>
+                <Route exact path="/sobre" component={Sobre}></Route>
+				<Route exact path="/produto" component={Produto}></Route>
+				<Route exact path="/*" component={Index}></Route>
             </Switch>
       );
   }
